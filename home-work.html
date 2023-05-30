@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Insert title here</title>
+  <style>
+    .container {
+      width: 50%;
+      border: 4px solid black;
+      margin: auto;
+      padding: 20px;
+      font-size: 25px;
+
+    }
+
+    #my form table tr td input {
+
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body bgcolor=pink text=black>
+  <div class="container">
+    <h1>MyForm</h1>
+    <form action="LoginFromServlet" method="post">
+
+      <table>
+        <tr>
+          <td>Enter your name:</td>
+          <td> <input type="text" name="user_name" placeholder="Type here" /></td>
+
+        <tr>
+          <td>Enter your password:</td>
+          <td> <input type="text" name="user_password" placeholder="Type here" /></td>
+
+        <tr>
+          <td>Enter your Email:</td>
+          <td> <input type="text" name="user_email" placeholder="Type here" /></td>
+
+        <tr>
+          <td>Select gender:</td>
+          <td> <input type="radio" name="user_gender" value="male" />male <input type="radio" name="user_gender" value="male" />female</td>
+
+        <tr>
+          <td>
+            select your course
+          </td>
+          <td>
+            <select name="user_course">
+              <option value="Java">java</option>
+              <option value="Python">python</option>
+              <option value="C++">c++</option>
+              <option value="Php">php</option>
+            </select>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td style="text-align:right;">
+            <input type="checkbox" value="checked" name="condition" />
+          </td>
+          <td>
+            Agree terms and condition
+          </td>
+        <tr>
+
+          <td>
+
+          </td>
+
+          <td>
+            <button type="submit">sumbit</button>
+            <button type="reset">Reset</button>
+          </td>
+
+
+        </tr>
+
+
+      </table>
+    </form>
+
+  </div>
+
+</body>
+
+</html>

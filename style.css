@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500&display=swap');
+*{
+  scroll-behavior: smooth;
+}
+body {
+    font-family: 'Wix Madefor Display', sans-serif;
+    font-size: 10pt;
+}
+.line-clamp{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.sd{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+progress::-webkit-progress-value {
+  background: rgb(37 99 235);
+}
+
+progress::-webkit-progress-bar {
+  background: rgb(219 234 254);
+}

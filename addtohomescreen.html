@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add to Home Screen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="https://dummyimage.com/200x200/ccc/000&text=ATHS">
+</head>
+<body>
+  <button id="addToHomeScreenBtn">Add to Home Screen</button>
+<img src="https://dummyimage.com/200x200/ccc/000&text=ATHS" alt="https://dummyimage.png" width="100px">
+  <script>
+    document.getElementById('addToHomeScreenBtn').addEventListener('click', () => {
+      if ('serviceWorker' in navigator && 'PushManager' in window) {
+        // Register a service worker
+        navigator.serviceWorker.register('service-worker.js')
+          .then((registration) => {
+            // Check if the page is already added to the home screen
+            if (registration.active) {
+              console.log('Page is already added to the home screen.');
+              return;
+            }
+
+            // Prompt the user to add to home screen
+            registration.active.postMessage({ action: 'prompt' });
+          })
+          .catch((error) => {
+            console.error('Service Worker registration failed:', error);
+          });
+      } else {
+        console.log('Add to home screen is not supported on this browser.');
+      }
+    });
+  </script>
+</body>
+</html>
